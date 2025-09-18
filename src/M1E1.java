@@ -11,6 +11,8 @@ public class M1E1 {
     // Afficher le nombre de secondes écoulées depuis minuit
     int nbSecondesDepuisMinuit = (heures * 60 * 60) + (minutes * 60) + (secondes);
 
+
+
     System.out.println("Il s'est écoulé " + nbSecondesDepuisMinuit + " secondes depuis minuit.");
 
 
