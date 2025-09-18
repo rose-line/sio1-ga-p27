@@ -15,6 +15,8 @@ public class M1E2 {
     // Afficher l'heure statique
     System.out.println("Il est " + heures + " h " + minutes + " min " + secondes + " s.");
 
+    // sldfkj
+
     // Afficher le nombre de secondes écoulées depuis minuit
     int nbSecondesDepuisMinuit = (heures * 60 * 60) + (minutes * 60) + (secondes);
 
