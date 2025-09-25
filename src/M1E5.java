@@ -31,7 +31,7 @@ public class M1E5 {
     // même quand le nombre à deviner est plus petit que la proposition du joueur
     int ecart = Math.abs(nombreADeviner - propositionJoueur);
 
-    // Affichag du résultat
+    // Affichage du résultat
     System.out.println("Vous étiez à " + ecart + " de la bonne réponse.");
   }
 }
