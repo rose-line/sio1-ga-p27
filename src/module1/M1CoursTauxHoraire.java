@@ -1,6 +1,8 @@
+package module1;
+
 import java.util.Scanner;
 
-public class ExerciceTauxHoraire {
+public class M1CoursTauxHoraire {
   public static void main(String[] args) throws Exception {
     // Récupérer le nombre d’heures travaillées
 

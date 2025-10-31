@@ -1,3 +1,5 @@
+package module1;
+
 public class M1E4 {
   public static void main(String[] args) {
     // Algorithme général : calculer le nombre de secondes écoulées entre les deux puis calculer le

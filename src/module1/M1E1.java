@@ -1,3 +1,5 @@
+package module1;
+
 public class M1E1 {
   public static void main(String[] args) {
     // Initialiser l'heure avec des variables

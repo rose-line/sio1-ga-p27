@@ -1,6 +1,8 @@
+package module1;
+
 import java.util.Scanner;
 
-public class ExerciceTexteATrous {
+public class M1CoursTexteATrous {
   public static void main(String[] args) {
     // 1. Récupération du premier nom commun
 
