@@ -27,11 +27,25 @@ public class Stock {
       stockActuel = stockActuel + nbReçus - nbVendus;
       System.out.println("Le stock actuel est de : " + stockActuel);
 
-      if (stockActuel <= seuilAlerte) {
+      // if ((stockActuel <= seuilAlerte) && (stockActuel >= 0)) {
+      // System.out.println("ATTENTION : le stock est sous le seuil d'alerte !");
+      // }
+
+      // if (stockActuel < 0) {
+      // System.out.println("ERREUR : le stock est négatif. Simulation arrêtée.");
+      // }
+      if (stockActuel < 0) {
+        System.out.println("ERREUR : le stock est négatif. Simulation arrêtée.");
+        break;
+      } else if (stockActuel <= seuilAlerte) {
         System.out.println("ATTENTION : le stock est sous le seuil d'alerte !");
       }
 
       numJour = numJour + 1; // numJour += 1 ; numJour++
+    }
+
+    if (stockActuel < 0) {
+      System.out.println("Simulation terminée. Stock final : " + stockActuel + " unités");
     }
 
     clavier.close();
