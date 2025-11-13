@@ -18,14 +18,18 @@ public class Stock {
     int stockActuel = stockInitial;
     int numJour = 1;
     while (numJour <= nbJours) {
-      System.out.println("Jour " + numJour);
+      System.out.println("\nJour " + numJour);
       System.out.println("------");
       System.out.print("Quantité de produits reçue ? ");
       int nbReçus = clavier.nextInt();
       System.out.print("Quantité de produits vendue ? ");
       int nbVendus = clavier.nextInt();
       stockActuel = stockActuel + nbReçus - nbVendus;
-      System.out.print("Le stock actuel est de : " + stockActuel);
+      System.out.println("Le stock actuel est de : " + stockActuel);
+
+      if (stockActuel <= seuilAlerte) {
+        System.out.println("ATTENTION : le stock est sous le seuil d'alerte !");
+      }
 
       numJour = numJour + 1; // numJour += 1 ; numJour++
     }
