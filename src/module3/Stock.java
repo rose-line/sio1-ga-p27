@@ -8,11 +8,11 @@ public class Stock {
 
     Scanner clavier = new Scanner(System.in);
 
-    System.out.println("Quel est le stock initial ?");
+    System.out.print("Quel est le stock initial ? ");
     int stockInitial = clavier.nextInt();
-    System.out.println("Quel est le seuil d'alerte ?");
+    System.out.print("Quel est le seuil d'alerte ? ");
     int seuilAlerte = clavier.nextInt();
-    System.out.println("Combien de jours doit durer la simulation ?");
+    System.out.print("Combien de jours doit durer la simulation ? ");
     int nbJours = clavier.nextInt();
 
     int stockActuel = stockInitial;
@@ -24,9 +24,10 @@ public class Stock {
       int nbReçus = clavier.nextInt();
       System.out.print("Quantité de produits vendue ? ");
       int nbVendus = clavier.nextInt();
-      System.out.print("Le stock actuel est de : ");
       stockActuel = stockActuel + nbReçus - nbVendus;
-      System.out.println("stock actuel : " + stockActuel);
+      System.out.print("Le stock actuel est de : " + stockActuel);
+
+      numJour = numJour + 1; // numJour += 1 ; numJour++
     }
 
     clavier.close();
