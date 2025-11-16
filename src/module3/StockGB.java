@@ -2,7 +2,7 @@ package module3;
 
 import java.util.Scanner;
 
-public class StockB {
+public class StockGB {
 
   public static void main(String[] args) {
     Scanner clavier = new Scanner(System.in);
@@ -13,6 +13,7 @@ public class StockB {
     System.out.print("Combien de jours doit durer la simulation ? ");
     int duréeSimulation = clavier.nextInt();
 
+    boolean simulationEnCours = true;
     int jourActuel = 1;
     int stockActuel = stockInitial;
     while (jourActuel <= duréeSimulation) {
@@ -26,6 +27,13 @@ public class StockB {
       stockActuel = stockActuel + qtéProduitsReçue - qtéProduitsVendue;
       System.out.println("Le stock actuel est de : " + stockActuel);
 
+      if (stockActuel < 0) {
+        System.out.println("ERREUR : le stock est négatif. Simulation arrêtée.");
+        simulationEnCours = false;
+        break;
+      } else if (stockActuel <= seuilAlerte) {
+        System.out.println("ATTENTION : le stock est sous le seuil d'alerte !");
+      }
 
       jourActuel = jourActuel + 1;
     }

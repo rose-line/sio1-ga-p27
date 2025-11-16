@@ -2,7 +2,7 @@ package module3;
 
 import java.util.Scanner;
 
-public class Stock {
+public class StockGA {
 
   public static void main(String[] args) {
 
@@ -16,9 +16,9 @@ public class Stock {
     int nbJours = clavier.nextInt();
 
     int stockActuel = stockInitial;
-    int numJour = 1;
-    while (numJour <= nbJours) {
-      System.out.println("\nJour " + numJour);
+    for (int i = 1; i <= nbJours; i++) {
+
+      System.out.println("\nJour " + i);
       System.out.println("------");
       System.out.print("Quantité de produits reçue ? ");
       int nbReçus = clavier.nextInt();
@@ -40,8 +40,6 @@ public class Stock {
       } else if (stockActuel <= seuilAlerte) {
         System.out.println("ATTENTION : le stock est sous le seuil d'alerte !");
       }
-
-      numJour = numJour + 1; // numJour += 1 ; numJour++
     }
 
     if (stockActuel < 0) {
